@@ -1,0 +1,142 @@
+.main-content {
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 2s;
+}
+  
+.main-content.visible {
+    opacity: 1;
+}
+  
+.main-content img {
+    max-width: 300px;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.main__header-info {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+    justify-content: center;
+    margin: 0 5rem;
+    gap: 50px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .main__header-info.visible {
+    opacity: 1;
+  }
+  
+  .main__header-info.hidden {
+    opacity: 0;
+  }
+  
+
+.main__header-info p, .main__header-info h2, .main__header-info h1 {
+    margin: 0;
+    text-align: start;
+}
+
+.main__header-info p, .main__header-info h2 {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.main__header-info_intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.main__header-info button {
+    margin-top: 1rem;
+}
+
+.main__header-info_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main__header-info_text button {
+    align-self: center;
+}
+
+.main__header-info_first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+    width: 100%;
+} 
+
+.main__header-info_first h2 {
+    font-size: 2rem;
+    margin-left: 0;
+}
+
+.main__header-info_first p {
+    margin: 0 1rem;
+    text-align: start;
+}
+
+.main__header-info_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.main__header-info_btns button {
+    margin: 0;
+}
+
+.main__header-info_btns.visible {
+    opacity: 1;
+}
+
+.main__header-info_btns.hidden {
+    opacity: 0;
+}
+
+.main__header-info_skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.main__header-info_skill {
+    text-align: start;
+}
+
+.main__header-info_projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+}
+
+.main__header-info_project h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main__header-info_project p {
+    margin-left: 0;
+    font-size: 1.2rem;
+    text-align: start;
+}
