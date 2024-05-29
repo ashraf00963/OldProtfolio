@@ -26,6 +26,6 @@ I welcome any feedback or suggestions you may have regarding my portfolio. Feel 
 ## Contact Me
 ----------
 
-If you'd like to get in touch with me, you can reach out via email at `attallahashraf@gmail.com` or connect with me on [LinkedIn](https://www.linkedin.com/in/ashrafattallah/).
+If you'd like to get in touch with me, you can reach out via email at `attallahashraf@gmail.com` or connect with me on [LinkedIn](https://www.linkedin.com/in/ashraf-attallah-a36330219/).
 
 Thank you for visiting my portfolio!
