@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router  basename="/Protfolio"> 
       <Routes>
         <Route path="/" element={<WelcomeScreen setShow={setShow} />} />
         <Route path="/home" element={<MainContent show={show} />} />
