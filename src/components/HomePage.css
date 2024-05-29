@@ -45,17 +45,43 @@
     font-size: 1.5rem;
 }
 
-.main__header-info_intro {
+.main__header-navbar {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.main__header-navbar.visible {
+    opacity: 1;
+}
+
+.main__header-navbar.hidden {
+    opacity: 0;
+}
+
+.main__header-info_intro {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     height: 100vh;
 }
 
 .main__header-info button {
     margin-top: 1rem;
+}
+
+.main__header-info_pic {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .main__header-info_text {
@@ -80,6 +106,7 @@
 
 .main__header-info_first h2 {
     font-size: 2rem;
+    margin-top: 4rem;
     margin-left: 0;
 }
 
@@ -87,6 +114,104 @@
     margin: 0 1rem;
     text-align: start;
 }
+
+.main__header-info_example {
+    display: flex;
+    justify-content: center;
+}
+
+.delayer, .switcher {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.delayer h3, .switcher h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.delayer p, .switcher p {
+    margin: 0 1rem;
+}
+
+.main__header-info_explane {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+    text-align: start;
+}
+
+.main__header-info_explane img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 10px; /* Add some space between images */
+}
+
+.main__header-info_explane h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.main__header-info_explane p {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.Fcode {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ff0000;
+    width: 50%;
+}
+
+.Scode {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #00ff00;
+    width: 50%;
+}
+
+.Fcode h3, .Scode h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+.Fcode p, .Scode p {
+    align-self: start;
+}
+
+.overlay {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000cc;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+    padding: 2rem;
+    opacity: 1; 
+  }
+  
+.overlay.visible {
+    opacity: 1; 
+}
+
+#fullscreen-image {
+    width: fit-content;
+    max-width: none;
+    max-height: none;
+}
+
 
 .main__header-info_btns {
     display: flex;
