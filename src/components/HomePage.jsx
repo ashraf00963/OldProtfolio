@@ -10,6 +10,8 @@ const MainContent = () => {
   const [delay, setDelay] = useState(1);
   const [buttonDelayer, setButtonDelayer] = useState(false);
   const [fullscreenImage, setFullscreenImage] = useState(null);
+  const [delayer, setDelayer] = useState(false);
+  const [switcher, setSwitcher] = useState(false);
 
   useEffect(() => {
     if (!visible) {
@@ -42,6 +44,16 @@ const MainContent = () => {
     const closeFullscreen = () => {
       setFullscreenImage(null);
     };
+
+    const handleDelayer = () => {
+        const timer = setTimeout(() => {
+            setDelayer(!delayer);
+        }, 1000);
+    }
+
+    const handleSwitcher = () => {
+        setSwitcher(!switcher);
+    }
 
   return (
     <div className={`main-content ${visible ? 'visible' : 'hidden'}`}>
@@ -90,17 +102,21 @@ const MainContent = () => {
                         <p>The animations in this portfolio are crafted using two distinct states: Delayer and Switcher.</p>
                         <div className='main__header-info_example'>
                             <div className='delayer'>
-                                <h3>Delayer:</h3>
-                                <p>This state controls the timing of text appearances and disappearances, adding a dynamic flow to the content.</p>
+                                <h3 className='clickable' onClick={handleDelayer}>Delayer:</h3>
+                                <p className={`sample ${delayer ? 'visible' : 'hidden'}`}>This state controls the timing of text appearances and disappearances, adding a dynamic flow to the content.</p>
                             </div>
-                           <div className='switcher'>
-                                <h3>Switcher:</h3>
+                           <div className='switcher' >
+                                <h3 className='clickable' onClick={handleSwitcher}>Switcher:</h3>
+                                {!switcher ? 
                                 <p>This state manages the transitions between sections, activating when the screen goes black to ensure a smooth switch.</p>
+                                :
+                                <p>Press Learn more button</p>
+                                }
                            </div>
                         </div>
-                        <button onClick={() => handleReplyes(3.5)}>Learn More</button>
                         <div className={`main__header-info_btns ${buttonDelayer ? 'visible' : 'hidden'}`}>
                             <button onClick={() => handleReplyes(1)}>Go Back</button>
+                            <button onClick={() => handleReplyes(3.5)}>Learn More</button>
                             <button onClick={() => handleReplyes(4)}>Skills</button>
                         </div>
                     </div>
@@ -111,13 +127,13 @@ const MainContent = () => {
                     <div className='main__header-info_first'>
                         <div className='main__header-info_explane'>
                             <div className='Fcode'>
-                            <h3>First, I found the way.</h3>
+                            <h3>First, I found the door.</h3>
                             <p>I used a complex three-state system to control animations. Initially, the 'delayer' state would fade text out slowly. Then, a timer triggered the 'helper' state, revealing the next section. When 'helper' changed, a useEffect hook updated the 'reply' state, showing new text and hiding the old section..</p>
                             <p>However, this approach is quite intricate and easy to forget. Moreover, it posed limitations on adding new sections, requiring a similar setup for each pair.</p>
                             <img src={Fcode} onClick={() => openFullscreen(Fcode)} />
                             </div>
                             <div className='Scode'>
-                            <h3>Then, I found an easier solution.</h3>
+                            <h3>Then, I found an easier way.</h3>
                             <p>With a more simplified approach, I've condensed the system into just two states. Upon pressing a button, the delay immediately sets to zero, causing the text to disappear. Then, within one second, the switch smoothly transitions to the new section. Finally, after two seconds, the delay is set to the correct section, seamlessly revealing the text.</p>
                             <img src={Scode} onClick={() => openFullscreen(Scode)} />
                             </div>
