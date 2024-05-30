@@ -1,3 +1,5 @@
+<img src="/protfolio/public/favicon.ico" alt="NTL logo" width="200"/>
+
 # Ashraf Attallah Portfolio
 
 Welcome to my portfolio repository! This repository contains the source code for my personal portfolio website, where I showcase my skills, projects, and experiences as a developer.
