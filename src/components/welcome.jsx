@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './welcome.css';
 
-const WelcomeScreen = ({ setShow }) => {
+const WelcomeScreen = () => {
   const [visible, setVisible] = useState(true);
   const navigate = useNavigate();
 
@@ -13,7 +13,6 @@ const WelcomeScreen = ({ setShow }) => {
 
     const naviTimer = setTimeout(() => {
         navigate('/home');
-        setShow(true);
     }, 4000);
 
     return () => clearTimeout(timer);

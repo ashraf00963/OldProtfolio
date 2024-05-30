@@ -1,8 +1,8 @@
 .welcome-screen {
   position: fixed;
-  font-size: 3rem;
   top: 0;
   left: 0;
+  font-size: 3rem;
   width: 100%;
   height: 100%;
   background-color: #000;
@@ -24,4 +24,8 @@
   max-width: 100%;
 }
   
-  
+@media screen and (max-width: 700px) {
+  .welcome-screen {
+    font-size: 1.2rem;
+  }
+}

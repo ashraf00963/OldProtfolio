@@ -5,14 +5,11 @@ import WelcomeScreen from './components/welcome';
 import MainContent from './components/HomePage';
 
 function App() {
-  const [show, setShow] = useState(false);
-
-
   return (
     <Router  basename="/Protfolio"> 
       <Routes>
-        <Route path="/" element={<WelcomeScreen setShow={setShow} />} />
-        <Route path="/home" element={<MainContent show={show} />} />
+        <Route path="/" element={<WelcomeScreen />} />
+        <Route path="/home" element={<MainContent />} />
       </Routes>
     </Router>
   );
