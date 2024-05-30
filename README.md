@@ -1,4 +1,4 @@
-<img src="/protfolio/public/favicon.ico" alt="NTL logo" width="200"/>
+<img src="public/favicon.ico" alt="NTL logo" width="200"/>
 
 # Ashraf Attallah Portfolio
 
