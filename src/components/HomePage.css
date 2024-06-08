@@ -101,7 +101,6 @@
 
 .main__one p {
     font-size: 1.5rem;
-    font-style: italic;
 }
 
 .main__two {
@@ -141,13 +140,11 @@
 .delayer p {
     margin: 1rem;
     color: #ffee00;
-    font-style: italic;
 }
 
 .switcher p {
     margin: 0 1rem;
     color: #5900ff;
-    font-style: italic;
 }
 
 .delayer .clickable {
@@ -325,27 +322,42 @@
 }
 
 .main__six h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
 }
 
 .main__header-info_projects {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 5rem;
+    justify-content: space-around;
     width: 100%;
+}
+
+.main__header-info_project {
+    width: 25%;
 }
 
 .main__header-info_project h2 {
     text-align: center;
     font-size: 1.8rem;
+    color: #ffee00;
 }
 
 .main__header-info_project p {
+    margin: 0.5rem 0;
     margin-left: 0;
     font-size: 1.5rem;
-    text-align: center;
-    font-style: italic;
+}
+
+.main__header-info_project a {
+    color: #ffbb00;
+    transition: color 0.2s ease-in;
+    text-decoration: none;
+}
+
+.main__header-info_project a:hover {
+    color: #664b01;
 }
 
 @media screen and (max-width: 900px) {

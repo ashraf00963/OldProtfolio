@@ -186,6 +186,7 @@ const MainContent = () => {
                                 <ul>
                                     <li>Node.js</li>
                                     <li>Express.js</li>
+                                    <li>php</li>
                                 </ul>
                             </div>
                             <div className='main__header-info_skill'>
@@ -217,6 +218,14 @@ const MainContent = () => {
                                 <p>Live site: <a href='https://nexttolast.store/' target='_blank'>www.nexttolast.store</a></p>
                                 <p>Frontend source code: <a href='https://github.com/ashraf00963/NextToLast.git'  target='_blank'>GitHub</a></p>
                                 <p>Backend source code: <a href='https://github.com/ashraf00963/NTLserver.git'  target='_blank'>GitHub</a></p>
+                            </div>
+                            <div className='main__header-info_project'>
+                                <h2>Genius Pockets</h2>
+                                <p>Simplify saving with goal-based compartments.</p>
+                                <p>Build with React-vite, php and SQL Hosted on lightspeed server</p>
+                                <p>Live site: <a href='https://geniuspockets.com/' target='_blank'>www.geniuspockets.com</a></p>
+                                <p>Frontend source code: <a href='https://github.com/ashraf00963/geniuspockets'  target='_blank'>GitHub</a></p>
+                                <p>Backend source code: <a href='https://github.com/ashraf00963/geniuspockets'  target='_blank'>Private</a></p>
                             </div>
                             <div className='main__header-info_project'>
                                 <h2>Other</h2>
