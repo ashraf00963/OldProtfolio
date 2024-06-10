@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Pic, Fcode, Scode } from '../assets';
 import './HomePage.css';
 
@@ -85,9 +85,11 @@ const MainContent = () => {
                 <div className={`main__header-info ${delay === 2 ? 'visible' : 'hidden'}`}>
                     <div className='main__one'>
                         <h1>I am</h1>
-                        <p>a math enthusiast with a passion for problem-solving. I love finding open doors in every challenge and figuring out the easiest way through.
-                             Logical and persistent, I'm always up for fixing and improving things, no matter how small the problem might seem.
-                             I enjoy spending time finding solutions and continuously learning new things.</p>
+                        <p>
+                            a passionate Frontend Developer with a knack for problem-solving and creating efficient solutions. With a strong foundation in HTML, CSS, JavaScript, and React, I enjoy transforming ideas into real-world applications that enhance user experiences.
+                            My journey in IT and frontend development began through online courses and hands-on projects, where I developed a keen eye for design and a commitment to writing clean, maintainable code.
+                            I’ve tackled various challenges that have honed my skills in both frontend and backend technologies.
+                        </p>
                         <div className={`main__header-info_btns ${buttonDelayer ? 'visible' : 'hidden'}`}>
                             <button onClick={() => handleReplyes(1)}>Go Back</button>
                             <button onClick={() => handleReplyes(3)}>animation</button>
@@ -102,11 +104,11 @@ const MainContent = () => {
                         <p>The animations in this portfolio are crafted using two distinct states: Delayer and Switcher.</p>
                         <div className='main__header-info_example'>
                             <div className='delayer'>
-                                <h2 className={`clickable ${delayer ? 'pressed' : ''}`} onClick={handleDelayer}>Delayer:</h2>
+                                <button className={`clickable ${delayer ? 'pressed' : ''}`} onClick={handleDelayer}>Delayer</button>
                                 <p className={`sample ${delayer ? 'visible' : 'hidden'}`}>This state controls the timing of text appearances and disappearances, adding a dynamic flow to the content.</p>
                             </div>
                            <div className='switcher' >
-                                <h2 className={`clickable ${switcher ? 'clicked' : ''}`} onClick={handleSwitcher}>Switcher:</h2>
+                                <button className={`clickable ${switcher ? 'clicked' : ''}`} onClick={handleSwitcher}>Switcher</button>
                                 {!switcher ? 
                                 <p id='long-txt'>This state manages the transitions between sections, activating when the screen goes black to ensure a smooth switch.</p>
                                 :
@@ -131,13 +133,13 @@ const MainContent = () => {
                             <p>I used a complex three-state system to control animations. Initially, the 'delayer' state would fade text out slowly. Then, a timer triggered the 'helper' state, revealing the next section. When 'helper' changed, a useEffect hook updated the 'reply' state, showing new text and hiding the old section..</p>
                             <p>However, this approach is quite intricate and easy to forget. Moreover, it posed limitations on adding new sections, requiring a similar setup for each pair.</p>
                             <button className='Big-screen' onClick={() => openFullscreen(Fcode)}>See Code</button>
-                            <button className='Small-screen'><a href='./src/assets/Scode.png' target='_blank'>See Code</a></button>
+                            <button className='Small-screen'><Link to={Fcode} target='_blank'>See Code</Link></button>
                             </div>
                             <div className='Scode'>
                             <h1>Then, I found an easier way.</h1>
                             <p>With a more simplified approach, I've condensed the system into just two states. Upon pressing a button, the delay immediately sets to zero, causing the text to disappear. Then, within one second, the switch smoothly transitions to the new section. Finally, after two seconds, the delay is set to the correct section, seamlessly revealing the text.</p>
                             <button className='Big-screen' onClick={() => openFullscreen(Scode)}>See Code</button>
-                            <button className='Small-screen'><a href='./src/assets/Scode.png' target='_blank'>See Code</a></button>
+                            <button className='Small-screen'><Link to={Scode} target='_blank'>See Code</Link></button>
                             </div>
                             {fullscreenImage && (
                                 <div className="overlay" onClick={closeFullscreen}>
@@ -186,13 +188,13 @@ const MainContent = () => {
                                 <ul>
                                     <li>Node.js</li>
                                     <li>Express.js</li>
-                                    <li>php</li>
                                 </ul>
                             </div>
                             <div className='main__header-info_skill'>
                                 <h2>Others:</h2>
                                 <ul>
                                     <li>JSON</li>
+                                    <li>axios</li>
                                     <li>Command Line (Bash)</li>
                                     <li>Web Hosting (cPanel)</li>
                                     <li>GitHub Pages</li>
@@ -215,21 +217,21 @@ const MainContent = () => {
                                 <h2>Next To Last</h2>
                                 <p>NTL is a E-commerce website</p>
                                 <p>Build with React-vite, Hosted on lightspeed server</p>
-                                <p>Live site: <a href='https://nexttolast.store/' target='_blank'>www.nexttolast.store</a></p>
-                                <p>Frontend source code: <a href='https://github.com/ashraf00963/NextToLast.git'  target='_blank'>GitHub</a></p>
-                                <p>Backend source code: <a href='https://github.com/ashraf00963/NTLserver.git'  target='_blank'>GitHub</a></p>
+                                <p>Live site: <Link to='https://nexttolast.store/' target='_blank'>www.nexttolast.store</Link></p>
+                                <p>Frontend source code: <Link to='https://github.com/ashraf00963/NextToLast.git'  target='_blank'>GitHub</Link></p>
+                                <p>Backend source code: <Link to='https://github.com/ashraf00963/NTLserver.git'  target='_blank'>GitHub</Link></p>
                             </div>
                             <div className='main__header-info_project'>
                                 <h2>Genius Pockets</h2>
                                 <p>Simplify saving with goal-based compartments.</p>
                                 <p>Build with React-vite, php and SQL Hosted on lightspeed server</p>
-                                <p>Live site: <a href='https://geniuspockets.com/' target='_blank'>www.geniuspockets.com</a></p>
-                                <p>Frontend source code: <a href='https://github.com/ashraf00963/geniuspockets'  target='_blank'>GitHub</a></p>
-                                <p>Backend source code: <a href='https://github.com/ashraf00963/geniuspockets'  target='_blank'>Private</a></p>
+                                <p>Live site: <Link to='https://geniuspockets.com/' target='_blank'>www.geniuspockets.com</Link></p>
+                                <p>Frontend source code: <Link to='https://github.com/ashraf00963/geniuspockets'  target='_blank'>GitHub</Link></p>
+                                <p>Backend source code: <Link to='https://github.com/ashraf00963/geniuspockets'  target='_blank'>Private</Link></p>
                             </div>
                             <div className='main__header-info_project'>
                                 <h2>Other</h2>
-                                <p>Check out source code: <a href='https://github.com/ashraf00963/Protfolio.git' target='_blank'>Protfolio</a></p>
+                                <p>Check out source code: <Link to='https://github.com/ashraf00963/Protfolio.git' target='_blank'>Protfolio</Link></p>
                                 <p>GitHub page: <a href='https://github.com/ashraf00963'  target='_blank'>GitHub</a></p>
                             </div>
                         </div>
