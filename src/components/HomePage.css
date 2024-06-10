@@ -33,16 +33,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    opacity: 0;
     transition: opacity 1s ease-in-out;
-}
-
-.main__header-navbar.visible {
-    opacity: 1;
-}
-
-.main__header-navbar button {
-    padding: 0.5rem 1rem;
 }
 
 .main__header-info_pic {
@@ -365,6 +356,42 @@
 }
 
 .main__header-info_project a:hover {
+    color: #664b01;
+}
+
+.main__seven {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.main__seven h1 {
+    font-size: 2.5rem;
+}
+
+.main__seven p {
+    font-size: 1.5rem;
+}
+
+.main__seven a {
+    color: #0019fd;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.main__seven a:hover {
+    color: #0212a1;
+}
+
+#email {
+    color: #ffbb00;
+    transition: color 0.2s ease-in-out;
+}
+
+#email:hover {
     color: #664b01;
 }
 

@@ -62,11 +62,12 @@ const MainContent = () => {
             <>
                 <div className={`main__header-info  ${delay === 1 ? 'visible' : 'hidden'}`}>
                     <div className='main__zero'>
-                        <div className={`main__header-navbar ${buttonDelayer ? 'visible' : 'hidden'}`}>
+                        <div className='main__header-navbar'>
                             <button onClick={() => handleReplyes(2)} id='who'>Who?</button>
                             <button onClick={() => handleReplyes(3)} id='animation'>animation</button>
                             <button onClick={() => handleReplyes(4)} id='skills'>Skills</button>
                             <button onClick={() => handleReplyes(5)} id='projects'>Projects</button>
+                            <button onClick={() => handleReplyes(6)} id='contact'>Contact</button>
                         </div>
                         <div className='main__header-info_pic'>
                             <div className='main__header-info_text'>
@@ -149,7 +150,7 @@ const MainContent = () => {
                         </div>
 
                         <div className={`main__header-info_btns ${buttonDelayer ? 'visible' : 'hidden'}`}>
-                                <button onClick={() => handleReplyes(3)}>animation</button>
+                                <button onClick={() => handleReplyes(3)}>Animation</button>
                                 <button onClick={() => handleReplyes(4)}>Skills</button>
                         </div>
                     </div>
@@ -234,6 +235,22 @@ const MainContent = () => {
                                 <p>Check out source code: <Link to='https://github.com/ashraf00963/Protfolio.git' target='_blank'>Protfolio</Link></p>
                                 <p>GitHub page: <a href='https://github.com/ashraf00963'  target='_blank'>GitHub</a></p>
                             </div>
+                        </div>
+                        <div className={`main__header-info_btns ${buttonDelayer ? 'visible' : 'hidden'}`}>
+                            <button onClick={() => handleReplyes(1)}>Go Back</button>
+                            <button onClick={() => handleReplyes(6)}>Contact</button>
+                        </div>
+                    </div>
+                </div>
+            }
+            {reply === 6 && 
+                <div className={`main__header-info ${delay === 6 ? 'visible' : 'hidden'}`}>
+                    <div className='main__seven'>
+                        <h1>Contact</h1>
+                        <div className='main__header-info_contact'>
+                            <p>Visit my <Link to='www.linkedin.com/in/ashraf-attallah-a36330219' target='_blank'>LinkedIn</Link> profile</p>
+                            <p>email me at <Link to='mailto:attallahashraf@gmail.com' target='_blank' id='email'>attallahashraf@gmail.com</Link></p>
+                            <p>phone number: 17621674747</p>
                         </div>
                         <div className={`main__header-info_btns ${buttonDelayer ? 'visible' : 'hidden'}`}>
                             <button onClick={() => handleReplyes(1)}>Go Back</button>
