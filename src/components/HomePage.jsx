@@ -74,7 +74,7 @@ const MainContent = () => {
                                 <h2>Hi there,</h2>
                                 <p>I am</p>
                                 <h1>Ashraf Attallah</h1>
-                                <button onClick={() => handleReplyes(2)}>Hi Ashraf!!</button>
+                                <button onClick={() => handleReplyes(2)}>continue</button>
                             </div>
                             <img src={Pic} alt="Ashraf Attallah" />
                         </div>
@@ -248,7 +248,7 @@ const MainContent = () => {
                     <div className='main__seven'>
                         <h1>Contact</h1>
                         <div className='main__header-info_contact'>
-                            <p>Visit my <Link to='www.linkedin.com/in/ashraf-attallah-a36330219' target='_blank'>LinkedIn</Link> profile</p>
+                            <p>Visit my <Link to='https://www.linkedin.com/in/ashraf-attallah-a36330219/' target='_blank'>LinkedIn</Link> profile</p>
                             <p>email me at <Link to='mailto:attallahashraf@gmail.com' target='_blank' id='email'>attallahashraf@gmail.com</Link></p>
                             <p>phone number: 17621674747</p>
                         </div>

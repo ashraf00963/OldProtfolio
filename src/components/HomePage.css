@@ -491,7 +491,12 @@
 @media screen and (max-width: 520px) {
     .main__header-navbar {
        gap: 0;
-       width: 100%;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+
+    .main__header-navbar * {
+        margin: 0.5rem;
     }
 
     .main__one {
@@ -505,27 +510,6 @@
     .main__zero {
         height: fit-content;
     }
-
-    .main__header-navbar {
-        flex-direction: column-reverse;
-        gap: 1rem;
-        align-items: end;
-    }
-
-    #who {
-        align-self: flex-start;
-    }
-
-    #animation {
-        align-self: start;
-        margin-left: 4.5rem;
-    }
-
-    #skills {
-        align-self: center;
-        margin-left: 5rem;
-    }
-
 
     .main__header-info_text h1 {
         font-size: 2.5rem;
